@@ -1,2 +1,140 @@
-# Detection-Lab
-Detection lab project
+<h1>Honeypot / Local Detection Lab (OpenCanary + Splunk)</h1>
+
+<p>
+<b>Detection Lab Project</b> to simulate real-world attacker behavior using a honeypot installed on a Linux Unbuntu Server version 25.10, outputting information through rsyslog as well as a local Windows 11 machine outputting information through syslog to analyze information in Splunk.
+</p>
+
+<hr>
+
+<h2>Project Overview</h2>
+
+<ul>
+  <li>Set up and deployed a Kali Linux machine to perform attacks from</li>
+  <li>Set up and deployed a Windows 11 machine to act as a target, but also to ingest and feed info to Splunk</li>
+  <li>Installed Syslog and created basic configuration to feed events into Windows Event Viewer</li>
+  <li>Splunk Universal Forwarder to ingest Windows Event Logs (Security, System, Application) into SIEM for detection and analysis</li>  
+  <li>Set up and configured a Linux Ubuntu Server running version 25.10 to host a honeypot</li>
+  <li>SSH'd into Unbutu Server from Kali linux machine to install OpenCanary Honeypot</li>
+  <li>Configured honeypot services (SSH, FTP, HTTP) on common attack ports (2222, 21, 8080) to capture brute force and reconnaissance activity</li>
+  <li>Deployed a honeypot to capture attacker activity</li>
+  <li>Forwarded logs using rsyslog into Splunk using UDP connection over port 514</li>
+  <li>Ingested data into Splunk SIEM</li>
+  <li>Built detections and dashboards</li>
+</ul>
+
+<hr>
+
+<h2>Architecture</h2>
+
+
+```mermaid
+flowchart TD
+
+A[Kali Linux] -->|Attack Traffic| B[OpenCanary Honeypot]
+A -->|Attack Traffic| F[Windows 11 Machine]
+
+subgraph Linux Honeypot
+B --> C[/var/tmp/opencanary.log/]
+C --> D[rsyslog]
+end
+
+D -->|Syslog UDP 514| E[Splunk SIEM]
+
+subgraph Windows Host
+F --> G[Event Viewer Logs]
+end
+
+G -->|Splunk Forwarder| E
+```
+
+
+<hr>
+
+<h2>Detection Capabilities</h2>
+
+<ul>
+  <li>SSH brute force detection</li>
+  <li>Port scanning detection</li>
+  <li>GeoIP attack mapping</li>
+  <li>Connection tracking by port</li>
+</ul>
+
+<hr>
+
+<h2>Screenshots</h2>
+
+<p><i>(Add your screenshots here)</i></p>
+
+<h3>🔹 Splunk Dashboard</h3>
+<img src="images/dashboard.png" width="600"/>
+
+<h3>🔹 </h3>
+<img src="images/map.png" width="600"/>
+
+<h3>🔹 </h3>
+<img src="images/logs.png" width="600"/>
+
+<h3>🔹 </h3>
+<img src="images/ports.png" width="600"/>
+
+<hr>
+
+<h2>Resume Highlights</h2>
+
+<ul>
+  <li>Built and deployed a <b>honeypot-based detection lab</b> using OpenCanary</li>
+  <li>Engineered a <b>log pipeline</b> using rsyslog into Splunk SIEM</li>
+  <li>Developed <b>SPL detection queries</b> for brute force and scanning activity</li>
+  <li>Simulated attacks using Kali Linux to validate detections</li>
+</ul>
+
+<hr>
+
+<h2>Tools & Technologies</h2>
+
+<!-- Network -->
+<h3>Network Analysis</h3>
+<div>
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white"/>
+</div>
+
+<!-- Endpoint -->
+<h3>Endpoint Security</h3>
+<div>
+  <img src="https://img.shields.io/badge/Microsoft_Defender-4CAF50?style=for-the-badge&logo=microsoft&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Windows_Event_Logs-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
+</div>
+
+<!-- SIEM -->
+<h3>SIEM & Log Analysis</h3>
+<div>
+  <img src="https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white"/>
+</div>
+
+<!-- Log Pipeline -->
+<h3>Log Pipeline</h3>
+<div>
+  <img src="https://img.shields.io/badge/rsyslog-Log%20Forwarder-orange?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Syslog-Log%20Ingestion-purple?style=for-the-badge"/>
+</div>
+
+<!-- Platforms -->
+<h3>Platforms</h3>
+<div>
+  <img src="https://img.shields.io/badge/Ubuntu_Linux-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Kali_Linux-268BEE?style=for-the-badge&logo=kalilinux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"/>
+</div>
+
+<hr>
+
+<h2>Future Improvements</h2>
+
+<ul>
+  <li>Alerting and automation</li>
+  <li>MITRE ATT&CK mapping</li>
+  <li>Cloud/VPS deployment</li>
+  <li>Threat scoring system</li>
+</ul>
+
+<hr>
