@@ -30,15 +30,15 @@
 ```mermaid
 flowchart TD
 
-A[Kali Linux] -->|Attack Traffic| B[OpenCanary Honeypot]
-A -->|Attack Traffic| F[Windows 11 Machine]
+A[Kali Linux\n192.168.64.2] -->|Attack Traffic| B[OpenCanary Honeypot\n192.168.64.4]
+A -->|Attack Traffic| F[Windows 11 Machine\n192.168.64.3]
 
 subgraph Linux Honeypot
 B --> C[/var/tmp/opencanary.log/]
 C --> D[rsyslog]
 end
 
-D -->|Syslog UDP 514| E[Splunk SIEM]
+D -->|Syslog UDP 514| E[Splunk SIEM\n192.168.64.3]
 
 subgraph Windows Host
 F --> G[Event Viewer Logs]
@@ -65,16 +65,16 @@ G -->|Splunk Forwarder| E
 
 <p><i>(Add your screenshots here)</i></p>
 
-<h3>🔹 Splunk Dashboard</h3>
-<img src="images/dashboard.png" width="600"/>
+<h3>Splunk Dashboard</h3>
+<img src="" width="600"/>
 
-<h3>🔹 </h3>
+<h3></h3>
 <img src="images/map.png" width="600"/>
 
-<h3>🔹 </h3>
+<h3></h3>
 <img src="images/logs.png" width="600"/>
 
-<h3>🔹 </h3>
+<h3></h3>
 <img src="images/ports.png" width="600"/>
 
 <hr>
