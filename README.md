@@ -76,6 +76,8 @@ G -->|Splunk Forwarder| E
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/OpenCanary%20interface.png" width="600"/>
 <li>Logs accessed from Kali machine using SSH, showing brute force login attempts</li>
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/Opencanary%20honeypot%20logs.png" width="600"/>
+<li>HoneyPot logs aggregating from rsyslogs into Splunk through UDP port 514</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/c5593ce7d15f478ade767a4e4b3231467f056959/Honeypot%20logs%20agrigating%20into%20splunk.png" width="600"/>
 
 <h3>Configurations</h3>
 <li>Custom Sysmon configuration</li>
@@ -84,7 +86,7 @@ G -->|Splunk Forwarder| E
 <h3>Attack Logs</h3>
 <li>Splunk logs showing unauthorized user creation </li>
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/splunk%20user%20add%20events.png"/>
-<li>Splunk logs showing reverse shell attack on Windows machine </li>
+<li>Splunk logs showing reverse shell attack over port 4444 on Windows machine </li>
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/Splunk%20Capture%20of%20shell%20event.png"/>
 
 <hr>
