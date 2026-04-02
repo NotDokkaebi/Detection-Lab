@@ -65,18 +65,27 @@ G -->|Splunk Forwarder| E
 
 <p><i>(Add your screenshots here)</i></p>
 
-<h3>Splunk Dashboard</h3>
+<h3>Splunk Dashboard and Alerts</h3>
+<li>Custom Alerts for unusual port activity</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/Splunk%20alerts.png" width="600"/>
 <li>Dashboard showing basic Splunk dashboards, including HoneyPot logs</li>
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/c0b758b015a47d5d0e1dcd4e2427fc01168bb773/Splunk%20dashboard%20with%20honeypot%20logs.png" width="600"/>
 
-<h3></h3>
-<img src="images/map.png" width="600"/>
+<h3>OpenCanary</h3>
+<li>OpenCanary startup interface showing ports used in HoneyPot</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/OpenCanary%20interface.png" width="600"/>
+<li>Logs accessed from Kali machine using SSH, showing brute force login attempts</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/Opencanary%20honeypot%20logs.png" width="600"/>
 
-<h3></h3>
-<img src="images/logs.png" width="600"/>
+<h3>Configurations</h3>
+<li>Custom Sysmon configuration</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/UpdatedSysmonconfig.png" width="600"/>
 
-<h3></h3>
-<img src="images/ports.png" width="600"/>
+<h3>Attack Logs</h3>
+<li>Splunk logs showing unauthorized user creation </li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/splunk%20user%20add%20events.png"/>
+<li>Splunk logs showing reverse shell attack on Windows machine </li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/Splunk%20Capture%20of%20shell%20event.png"/>
 
 <hr>
 
