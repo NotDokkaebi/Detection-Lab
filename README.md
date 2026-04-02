@@ -82,6 +82,8 @@ G -->|Splunk Forwarder| E
 <h3>Configurations</h3>
 <li>Custom Sysmon configuration</li>
 <img src="https://github.com/NotDokkaebi/Detection-Lab/blob/dd87f8894005af458a3e06d9f7e3a55a3efb2832/UpdatedSysmonconfig.png" width="600"/>
+<li>Simple OpenCanary configuration</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/ad1b0f518ebd1e7ffdbbf9592ec4c85c4e532dc8/Simple%20Opencanary%20Configuration.png" width="600"/>
 
 <h3>Attack Logs</h3>
 <li>Splunk logs showing unauthorized user creation </li>
