@@ -66,7 +66,8 @@ G -->|Splunk Forwarder| E
 <p><i>(Add your screenshots here)</i></p>
 
 <h3>Splunk Dashboard</h3>
-<img src="" width="600"/>
+<li>Dashboard showing basic Splunk dashboards, including HoneyPot logs</li>
+<img src="https://github.com/NotDokkaebi/Detection-Lab/blob/c0b758b015a47d5d0e1dcd4e2427fc01168bb773/Splunk%20dashboard%20with%20honeypot%20logs.png" width="600"/>
 
 <h3></h3>
 <img src="images/map.png" width="600"/>
