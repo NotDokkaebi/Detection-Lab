@@ -19,7 +19,7 @@
   <li>Deployed a honeypot to capture attacker activity</li>
   <li>Forwarded logs using rsyslog into Splunk using UDP connection over port 514</li>
   <li>Ingested data into Splunk SIEM</li>
-  <li>Built detections and dashboards</li>
+  <li>Built detections and alerts along with a basic dashboard</li>
 </ul>
 
 <hr>
