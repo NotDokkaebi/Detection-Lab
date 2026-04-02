@@ -1,7 +1,7 @@
 <h1>Honeypot / Local Detection Lab (OpenCanary + Splunk)</h1>
 
 <p>
-<b>Detection Lab Project</b> to simulate real-world attacker behavior using a honeypot installed on a Linux Unbuntu Server version 25.10, outputting information through rsyslog as well as a local Windows 11 machine outputting information through syslog to analyze information in Splunk.
+<b>Detection Lab Project</b> to simulate real-world attacker behavior using a honeypot installed on a Linux Ubuntu Server version 25.10, outputting information through rsyslog as well as a local Windows 11 machine outputting information through syslog to analyze information in Splunk.
 </p>
 
 <hr>
@@ -14,7 +14,7 @@
   <li>Installed Syslog and created basic configuration to feed events into Windows Event Viewer</li>
   <li>Splunk Universal Forwarder to ingest Windows Event Logs (Security, System, Application) into SIEM for detection and analysis</li>  
   <li>Set up and configured a Linux Ubuntu Server running version 25.10 to host a honeypot</li>
-  <li>SSH'd into Unbutu Server from Kali linux machine to install OpenCanary Honeypot</li>
+  <li>SSH'd into Ubuntu Server from Kali Linux machine to install OpenCanary Honeypot</li>
   <li>Configured honeypot services (SSH, FTP, HTTP) on common attack ports (2222, 21, 8080) to capture brute force and reconnaissance activity</li>
   <li>Deployed a honeypot to capture attacker activity</li>
   <li>Forwarded logs using rsyslog into Splunk using UDP connection over port 514</li>
@@ -33,7 +33,7 @@ flowchart TD
 A[Kali Linux\n192.168.64.2] -->|Attack Traffic| B[OpenCanary Honeypot\n192.168.64.4]
 A -->|Attack Traffic| F[Windows 11 Machine\n192.168.64.3]
 
-subgraph Linux Honeypot
+subgraph Linux Ubuntu Honeypot
 B --> C[/var/tmp/opencanary.log/]
 C --> D[rsyslog]
 end
