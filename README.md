@@ -55,7 +55,6 @@ G -->|Splunk Forwarder| E
 <ul>
   <li>SSH brute force detection</li>
   <li>Port scanning detection</li>
-  <li>GeoIP attack mapping</li>
   <li>Connection tracking by port</li>
 </ul>
 
